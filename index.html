@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Aditya Setya Budi - Fire Protection Engineer</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: "#e63946",
+							secondary: "#1d3557",
+							accent: "#457b9d",
+							light: "#f1faee",
+							dark: "#0d1b2a",
+						},
+					},
+				},
+			};
+		</script>
+		<style>
+			.hero-pattern {
+				background-image: radial-gradient(
+					circle,
+					rgba(241, 250, 238, 0.1) 1px,
+					transparent 1px
+				);
+				background-size: 20px 20px;
+			}
+			.section-divider {
+				position: relative;
+				height: 100px;
+				overflow: hidden;
+			}
+			.section-divider::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				height: 100%;
+				background: linear-gradient(
+						45deg,
+						transparent 33.333%,
+						#f1faee 33.333%,
+						#f1faee 66.667%,
+						transparent 66.667%
+					),
+					linear-gradient(
+						-45deg,
+						transparent 33.333%,
+						#f1faee 33.333%,
+						#f1faee 66.667%,
+						transparent 66.667%
+					);
+				background-size: 20px 40px;
+				transform: rotate(180deg);
+			}
+			.timeline-item::before {
+				content: "";
+				position: absolute;
+				left: -20px;
+				top: 0;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: #e63946;
+				border: 3px solid #1d3557;
+			}
+			.skill-bar {
+				height: 8px;
+				background-color: #e2e8f0;
+				border-radius: 4px;
+				overflow: hidden;
+			}
+			.skill-progress {
+				height: 100%;
+				background-color: #e63946;
+				border-radius: 4px;
+			}
+			.hover-scale {
+				transition: transform 0.3s ease;
+			}
+			.hover-scale:hover {
+				transform: scale(1.03);
+			}
+		</style>
+	</head>
+	<body class="bg-light text-dark font-sans">
+		<!-- Navigation -->
+		<nav class="bg-white shadow-md sticky top-0 z-50">
+			<div class="container mx-auto px-6 py-3">
+				<div class="flex justify-between items-center">
+					<div class="text-2xl font-bold text-primary">ASB</div>
+					<div class="hidden md:flex space-x-8">
+						<a
+							href="#home"
+							class="text-secondary hover:text-primary font-medium"
+							>Home</a
+						>
+						<a
+							href="#about"
+							class="text-secondary hover:text-primary font-medium"
+							>About</a
+						>
+						<a
+							href="#expertise"
+							class="text-secondary hover:text-primary font-medium"
+							>Expertise</a
+						>
+						<a
+							href="#experience"
+							class="text-secondary hover:text-primary font-medium"
+							>Experience</a
+						>
+						<a
+							href="#contact"
+							class="text-secondary hover:text-primary font-medium"
+							>Contact</a
+						>
+					</div>
+					<button class="md:hidden focus:outline-none">
+						<i class="fas fa-bars text-2xl text-secondary"></i>
+					</button>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section id="home" class="hero-pattern py-20 md:py-32">
+			<div
+				class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+			>
+				<div class="md:w-1/2 mb-10 md:mb-0">
+					<h1 class="text-4xl md:text-6xl font-bold text-secondary mb-4">
+						Aditya Setya Budi
+					</h1>
+					<h2 class="text-2xl md:text-3xl text-accent mb-6">
+						Fire Protection Engineer
+					</h2>
+					<p class="text-lg text-gray-700 mb-8">
+						Specializing in automatic fire protection systems, risk assessment,
+						and safety management with over a decade of professional experience.
+					</p>
+					<div class="flex space-x-4">
+						<a
+							href="#contact"
+							class="bg-primary hover:bg-red-600 text-white px-6 py-3 rounded-lg font-medium transition duration-300"
+							>Contact Me</a
+						>
+						<a
+							href="#about"
+							class="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-6 py-3 rounded-lg font-medium transition duration-300"
+							>Learn More</a
+						>
+					</div>
+				</div>
+				<div class="md:w-1/2 flex justify-center">
+					<div
+						class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-xl"
+					>
+						<!-- Placeholder for profile image -->
+						<div
+							class="w-full h-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center"
+						>
+							<span class="text-white text-6xl font-bold">ASB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section id="about" class="py-20 bg-white">
+			<div class="container mx-auto px-6">
+				<h2
+					class="text-3xl md:text-4xl font-bold text-center text-secondary mb-16"
+				>
+					About Me
+				</h2>
+				<div class="flex flex-col md:flex-row">
+					<div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+						<h3 class="text-2xl font-semibold text-primary mb-4">
+							Professional Summary
+						</h3>
+						<p class="text-gray-700 mb-6 leading-relaxed">
+							Fire Protection Engineer with expertise in automatic fire
+							protection systems, fire risk assessment and evaluation,
+							electrical and energy safety, and fire protection system
+							construction projects with budgets exceeding IDR 10 Billion.
+						</p>
+						<p class="text-gray-700 mb-6 leading-relaxed">
+							Competent in providing technical authority for automatic fire
+							protection systems, cost and budget management, team building and
+							development, fire extinguishing training, and maintenance of fire
+							protection system facilities in accordance with national and
+							international regulatory standards.
+						</p>
+						<div class="bg-gray-100 p-6 rounded-lg">
+							<div class="flex items-center mb-4">
+								<i class="fas fa-map-marker-alt text-primary mr-3"></i>
+								<span>Cilacap, Jawa Tengah, Indonesia</span>
+							</div>
+							<div class="flex items-center mb-4">
+								<i class="fas fa-phone-alt text-primary mr-3"></i>
+								<span>0813–8084–8276</span>
+							</div>
+							<div class="flex items-center">
+								<i class="fas fa-envelope text-primary mr-3"></i>
+								<span>adityasetyabudi.20@gmail.com</span>
+							</div>
+						</div>
+					</div>
+					<div class="md:w-1/2">
+						<h3 class="text-2xl font-semibold text-primary mb-4">Education</h3>
+						<div class="mb-8">
+							<div class="flex justify-between items-center mb-2">
+								<h4 class="text-lg font-medium text-secondary">
+									S1 Electrical Engineering
+								</h4>
+								<span
+									class="bg-primary text-white text-sm px-3 py-1 rounded-full"
+									>2023 - Present</span
+								>
+							</div>
+							<p class="text-gray-600">
+								Universitas Wijayakusuma Purwokerto (Employee Class)
+							</p>
+						</div>
+						<div class="mb-8">
+							<div class="flex justify-between items-center mb-2">
+								<h4 class="text-lg font-medium text-secondary">
+									Automotive Engineering
+								</h4>
+								<span
+									class="bg-primary text-white text-sm px-3 py-1 rounded-full"
+									>2009 - 2012</span
+								>
+							</div>
+							<p class="text-gray-600">SMK Cipta Karya, Prembun</p>
+						</div>
+
+						<h3 class="text-2xl font-semibold text-primary mb-4">Skills</h3>
+						<div class="space-y-4">
+							<div>
+								<div class="flex justify-between mb-1">
+									<span class="font-medium text-secondary"
+										>Fire Protection Systems</span
+									>
+									<!-- <span class="text-gray-600">100%</span> -->
+								</div>
+								<div class="skill-bar">
+									<div class="skill-progress" style="width: 100%"></div>
+								</div>
+							</div>
+							<div>
+								<div class="flex justify-between mb-1">
+									<span class="font-medium text-secondary"
+										>Risk Assessment</span
+									>
+									<!-- <span class="text-gray-600">90%</span> -->
+								</div>
+								<div class="skill-bar">
+									<div class="skill-progress" style="width: 100%"></div>
+								</div>
+							</div>
+							<div>
+								<div class="flex justify-between mb-1">
+									<span class="font-medium text-secondary"
+										>Project Management</span
+									>
+									<!-- <span class="text-gray-600">88%</span> -->
+								</div>
+								<div class="skill-bar">
+									<div class="skill-progress" style="width: 100%"></div>
+								</div>
+							</div>
+							<div>
+								<div class="flex justify-between mb-1">
+									<span class="font-medium text-secondary">Team Training</span>
+									<!-- <span class="text-gray-600">85%</span> -->
+								</div>
+								<div class="skill-bar">
+									<div class="skill-progress" style="width: 100%"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Expertise Section -->
+		<div class="section-divider"></div>
+		<section id="expertise" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-6">
+				<h2
+					class="text-3xl md:text-4xl font-bold text-center text-secondary mb-16"
+				>
+					Areas of Expertise
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Expertise Card 1 -->
+					<div
+						class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 hover-scale"
+					>
+						<div class="text-primary text-4xl mb-4">
+							<i class="fas fa-fire-extinguisher"></i>
+						</div>
+						<h3 class="text-xl font-bold text-secondary mb-3">
+							Fire Alarm & Suppression Systems
+						</h3>
+						<p class="text-gray-600 mb-4">
+							Expertise in designing fire alarm and suppression system
+							installations with compliance to various standards including:
+						</p>
+						<ul class="text-gray-600 space-y-2">
+							<li class="flex items-start">
+								<i class="fas fa-check text-primary mr-2 mt-1"></i>
+								<span>SNI-03-1735-2000, SNI-03-3945-200</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-primary mr-2 mt-1"></i>
+								<span>Perm PU20-2009</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-primary mr-2 mt-1"></i>
+								<span>NFPA 12, 13, 14, 15, 20, 22, 70, 72, 2001</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Expertise Card 2 -->
+					<div
+						class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 hover-scale"
+					>
+						<div class="text-primary text-4xl mb-4">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						<h3 class="text-xl font-bold text-secondary mb-3">
+							Fire Risk Assessment
+						</h3>
+						<p class="text-gray-600 mb-4">
+							Specialized in fire risk assessment and evaluation with compliance
+							to:
+						</p>
+						<ul class="text-gray-600 space-y-2">
+							<li class="flex items-start">
+								<i class="fas fa-check text-primary mr-2 mt-1"></i>
+								<span>Perm PU 20-2009</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-primary mr-2 mt-1"></i>
+								<span>NFPA 1, 101, 850, 551</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-primary mr-2 mt-1"></i>
+								<span>API 650</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Expertise Card 3 -->
+					<div
+						class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 hover-scale"
+					>
+						<div class="text-primary text-4xl mb-4">
+							<i class="fas fa-users"></i>
+						</div>
+						<h3 class="text-xl font-bold text-secondary mb-3">
+							Emergency Planning & Training
+						</h3>
+						<p class="text-gray-600 mb-4">
+							Development of Emergency Response Plans (ERP), training programs,
+							consulting, and strategic planning.
+						</p>
+						<ul class="text-gray-600 space-y-2">
+							<li class="flex items-start">
+								<i class="fas fa-check text-primary mr-2 mt-1"></i>
+								<span>Emergency Response Plan development</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-primary mr-2 mt-1"></i>
+								<span>Fire safety training programs</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-primary mr-2 mt-1"></i>
+								<span>Strategic safety consulting</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Achievements Section -->
+		<div class="section-divider"></div>
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-6">
+				<h2
+					class="text-3xl md:text-4xl font-bold text-center text-secondary mb-16"
+				>
+					Outstanding Achievements
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<!-- Achievement 1 -->
+					<div class="bg-gray-50 p-6 rounded-lg border-l-4 border-primary">
+						<div class="flex items-start">
+							<div class="bg-primary text-white p-3 rounded-full mr-4">
+								<i class="fas fa-trophy text-xl"></i>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-secondary mb-2">
+									NFPA Standard Compliance
+								</h3>
+								<p class="text-gray-600">
+									Reset fire pump systems according to NFPA 20 and NFPA 14
+									standards; reset fire alarm and suppression systems according
+									to NFPA 12, 70, 72, and NFPA 2001.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Achievement 2 -->
+					<div class="bg-gray-50 p-6 rounded-lg border-l-4 border-primary">
+						<div class="flex items-start">
+							<div class="bg-primary text-white p-3 rounded-full mr-4">
+								<i class="fas fa-chart-line text-xl"></i>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-secondary mb-2">
+									Comprehensive Risk Assessment
+								</h3>
+								<p class="text-gray-600">
+									Led fire risk assessment and evaluation across all locations
+									of PT Solusi Bangun Indonesia Tbk and its Packing Plants from
+									2022 to 2024 in accordance with Permenaker and NFPA.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Achievement 3 -->
+					<div class="bg-gray-50 p-6 rounded-lg border-l-4 border-primary">
+						<div class="flex items-start">
+							<div class="bg-primary text-white p-3 rounded-full mr-4">
+								<i class="fas fa-hard-hat text-xl"></i>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-secondary mb-2">
+									Zero LTI Record
+								</h3>
+								<p class="text-gray-600">
+									Led fire alarm and suppression system projects since 2014 to
+									present without any Lost Time Injury (LTI).
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Achievement 4 -->
+					<div class="bg-gray-50 p-6 rounded-lg border-l-4 border-primary">
+						<div class="flex items-start">
+							<div class="bg-primary text-white p-3 rounded-full mr-4">
+								<i class="fas fa-users-cog text-xl"></i>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-secondary mb-2">
+									Safety Culture Development
+								</h3>
+								<p class="text-gray-600">
+									Actively involved in basic safety training and emergency
+									response teams as a commitment to Culture of Interdependence
+									on Safety.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Experience Section -->
+		<div class="section-divider"></div>
+		<section id="experience" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-6">
+				<h2
+					class="text-3xl md:text-4xl font-bold text-center text-secondary mb-16"
+				>
+					Work Experience
+				</h2>
+				<div class="relative">
+					<!-- Timeline -->
+					<div
+						class="border-l-2 border-primary border-opacity-30 ml-4 pl-8 space-y-12"
+					>
+						<!-- Experience 1 -->
+						<div class="relative timeline-item">
+							<div
+								class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+							>
+								<div class="flex justify-between items-start mb-2">
+									<h3 class="text-xl font-bold text-secondary">
+										Fire Protection Engineer
+									</h3>
+									<span
+										class="bg-primary text-white text-sm px-3 py-1 rounded-full"
+										>Jan 2022 - Present</span
+									>
+								</div>
+								<h4 class="text-lg font-medium text-accent mb-3">
+									PT Solusi Bangun Indonesia Tbk
+								</h4>
+								<ul class="text-gray-600 space-y-2">
+									<li class="flex items-start">
+										<i class="fas fa-check text-primary mr-2 mt-1"></i>
+										<span
+											>Project planning, control, and management for fire
+											protection</span
+										>
+									</li>
+									<li class="flex items-start">
+										<i class="fas fa-check text-primary mr-2 mt-1"></i>
+										<span>Basic fire training for employees</span>
+									</li>
+									<li class="flex items-start">
+										<i class="fas fa-check text-primary mr-2 mt-1"></i>
+										<span>Leading fire risk assessment and evaluation</span>
+									</li>
+									<li class="flex items-start">
+										<i class="fas fa-check text-primary mr-2 mt-1"></i>
+										<span
+											>Designing and budgeting including material
+											specifications</span
+										>
+									</li>
+									<li class="flex items-start">
+										<i class="fas fa-check text-primary mr-2 mt-1"></i>
+										<span>Member of Fire and Rescue team</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Experience 2 -->
+						<div class="relative timeline-item">
+							<div
+								class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+							>
+								<div class="flex justify-between items-start mb-2">
+									<h3 class="text-xl font-bold text-secondary">
+										Technical Specialist Fire Protection System
+									</h3>
+									<span
+										class="bg-primary text-white text-sm px-3 py-1 rounded-full"
+										>Oct 2013 - Dec 2021</span
+									>
+								</div>
+								<h4 class="text-lg font-medium text-accent mb-3">
+									PT Prima Tunggal Javaland
+								</h4>
+								<ul class="text-gray-600 space-y-2">
+									<li class="flex items-start">
+										<i class="fas fa-check text-primary mr-2 mt-1"></i>
+										<span>Control and management of fire projects</span>
+									</li>
+									<li class="flex items-start">
+										<i class="fas fa-check text-primary mr-2 mt-1"></i>
+										<span>Employee training</span>
+									</li>
+									<li class="flex items-start">
+										<i class="fas fa-check text-primary mr-2 mt-1"></i>
+										<span>Construction site management</span>
+									</li>
+									<li class="flex items-start">
+										<i class="fas fa-check text-primary mr-2 mt-1"></i>
+										<span>Supervisory skills</span>
+									</li>
+									<li class="flex items-start">
+										<i class="fas fa-check text-primary mr-2 mt-1"></i>
+										<span>Technical fire protection systems</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Experience 3 -->
+						<div class="relative timeline-item">
+							<div
+								class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+							>
+								<div class="flex justify-between items-start mb-2">
+									<h3 class="text-xl font-bold text-secondary">
+										Production Operator
+									</h3>
+									<span
+										class="bg-primary text-white text-sm px-3 py-1 rounded-full"
+										>Jun 2012 - Sep 2013</span
+									>
+								</div>
+								<h4 class="text-lg font-medium text-accent mb-3">
+									PT Indo Silider
+								</h4>
+								<p class="text-gray-600">
+									Gained foundational industrial experience in production
+									operations.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<div class="section-divider"></div>
+		<section id="contact" class="py-20 bg-white">
+			<div class="container mx-auto px-6">
+				<h2
+					class="text-3xl md:text-4xl font-bold text-center text-secondary mb-16"
+				>
+					Get In Touch
+				</h2>
+				<div class="flex flex-col md:flex-row">
+					<div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+						<h3 class="text-2xl font-semibold text-primary mb-6">
+							Contact Information
+						</h3>
+						<div class="space-y-6">
+							<div class="flex items-start">
+								<div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+									<i class="fas fa-map-marker-alt text-primary"></i>
+								</div>
+								<div>
+									<h4 class="font-medium text-secondary mb-1">Location</h4>
+									<p class="text-gray-600">Cilacap, Jawa Tengah, Indonesia</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+									<i class="fas fa-phone-alt text-primary"></i>
+								</div>
+								<div>
+									<h4 class="font-medium text-secondary mb-1">Phone</h4>
+									<p class="text-gray-600">0813–8084–8276</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+									<i class="fas fa-envelope text-primary"></i>
+								</div>
+								<div>
+									<h4 class="font-medium text-secondary mb-1">Email</h4>
+									<p class="text-gray-600">adityasetyabudi.20@gmail.com</p>
+								</div>
+							</div>
+						</div>
+
+						<h3 class="text-2xl font-semibold text-primary mt-10 mb-6">
+							Connect With Me
+						</h3>
+						<div class="flex space-x-4">
+							<a
+								href="#"
+								class="bg-gray-100 hover:bg-primary hover:text-white p-3 rounded-full text-gray-700 transition duration-300"
+							>
+								<i class="fab fa-linkedin-in"></i>
+							</a>
+							<a
+								href="#"
+								class="bg-gray-100 hover:bg-primary hover:text-white p-3 rounded-full text-gray-700 transition duration-300"
+							>
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a
+								href="#"
+								class="bg-gray-100 hover:bg-primary hover:text-white p-3 rounded-full text-gray-700 transition duration-300"
+							>
+								<i class="fab fa-facebook-f"></i>
+							</a>
+							<a
+								href="#"
+								class="bg-gray-100 hover:bg-primary hover:text-white p-3 rounded-full text-gray-700 transition duration-300"
+							>
+								<i class="fab fa-instagram"></i>
+							</a>
+						</div>
+					</div>
+					<div class="md:w-1/2">
+						<form class="space-y-6">
+							<div>
+								<label for="name" class="block text-gray-700 font-medium mb-2"
+									>Your Name</label
+								>
+								<input
+									type="text"
+									id="name"
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+									placeholder="Enter your name"
+								/>
+							</div>
+							<div>
+								<label for="email" class="block text-gray-700 font-medium mb-2"
+									>Your Email</label
+								>
+								<input
+									type="email"
+									id="email"
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+									placeholder="Enter your email"
+								/>
+							</div>
+							<div>
+								<label
+									for="subject"
+									class="block text-gray-700 font-medium mb-2"
+									>Subject</label
+								>
+								<input
+									type="text"
+									id="subject"
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+									placeholder="Enter subject"
+								/>
+							</div>
+							<div>
+								<label
+									for="message"
+									class="block text-gray-700 font-medium mb-2"
+									>Message</label
+								>
+								<textarea
+									id="message"
+									rows="5"
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+									placeholder="Enter your message"
+								></textarea>
+							</div>
+							<button
+								type="submit"
+								class="bg-primary hover:bg-red-600 text-white px-6 py-3 rounded-lg font-medium transition duration-300 w-full"
+							>
+								Send Message
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-secondary text-white py-10">
+			<div class="container mx-auto px-6">
+				<div class="flex flex-col md:flex-row justify-between items-center">
+					<div class="mb-6 md:mb-0">
+						<div class="text-2xl font-bold text-primary mb-2">
+							Aditya Setya Budi
+						</div>
+						<p class="text-gray-300">Fire Protection Engineer</p>
+					</div>
+					<div class="flex space-x-6">
+						<a href="#home" class="text-gray-300 hover:text-white">Home</a>
+						<a href="#about" class="text-gray-300 hover:text-white">About</a>
+						<a href="#expertise" class="text-gray-300 hover:text-white"
+							>Expertise</a
+						>
+						<a href="#experience" class="text-gray-300 hover:text-white"
+							>Experience</a
+						>
+						<a href="#contact" class="text-gray-300 hover:text-white"
+							>Contact</a
+						>
+					</div>
+				</div>
+				<div
+					class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400"
+				>
+					<p>&copy; 2024 Aditya Setya Budi. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Back to Top Button -->
+		<button
+			id="backToTop"
+			class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300"
+		>
+			<i class="fas fa-arrow-up"></i>
+		</button>
+
+		<script>
+			// Back to Top Button
+			const backToTopButton = document.getElementById("backToTop");
+
+			window.addEventListener("scroll", () => {
+				if (window.pageYOffset > 300) {
+					backToTopButton.classList.remove("opacity-0", "invisible");
+					backToTopButton.classList.add("opacity-100", "visible");
+				} else {
+					backToTopButton.classList.remove("opacity-100", "visible");
+					backToTopButton.classList.add("opacity-0", "invisible");
+				}
+			});
+
+			backToTopButton.addEventListener("click", () => {
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth",
+				});
+			});
+
+			// Smooth scrolling for navigation links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener("click", function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute("href");
+					const targetElement = document.querySelector(targetId);
+
+					if (targetElement) {
+						window.scrollTo({
+							top: targetElement.offsetTop - 80,
+							behavior: "smooth",
+						});
+					}
+				});
+			});
+
+			// Mobile menu toggle (would need additional implementation)
+			const mobileMenuButton = document.querySelector(".md\\:hidden");
+			mobileMenuButton.addEventListener("click", () => {
+				// Implement mobile menu toggle functionality here
+				console.log("Mobile menu clicked");
+			});
+		</script>
+	</body>
+</html>
