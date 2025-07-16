@@ -18,6 +18,14 @@ backToTopButton.addEventListener("click", () => {
   });
 });
 
+// Mobile menu toggle
+document
+  .getElementById("menu-toggle")
+  .addEventListener("click", function () {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("hidden");
+  });
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -31,13 +39,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         top: targetElement.offsetTop - 80,
         behavior: "smooth",
       });
+
+      // Close mobile menu if open
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (!mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+      }
     }
   });
-});
-
-// Mobile menu toggle (would need additional implementation)
-const mobileMenuButton = document.querySelector(".md\\:hidden");
-mobileMenuButton.addEventListener("click", () => {
-  // Implement mobile menu toggle functionality here
-  console.log("Mobile menu clicked");
 });
