@@ -16,8 +16,12 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #3b82f6;
-  transition: width 0.3s ease;
+  background-color: #e63946;
+  transition: width 0.3s ease-in;
+  -webkit-transition: width 0.3s ease-in;
+  -moz-transition: width 0.3s ease-in;
+  -ms-transition: width 0.3s ease-in;
+  -o-transition: width 0.3s ease-in;
 }
 .nav-link:hover:after {
   width: 100%;
